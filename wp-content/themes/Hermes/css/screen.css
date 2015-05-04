@@ -4070,4 +4070,19 @@ strong.line
 .info .col2 {
     float: right;
 }
+
+/* PHONE ON TOP */
+.phone {
+    float: right;
+}
+.phone ul
+{
+    list-style-type: none;
+}
+.phone h2,
+.phone li
+{
+    font-size: 18px;
+    line-height: 120%;
+}
 }
