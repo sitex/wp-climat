@@ -87,6 +87,8 @@ Thumbs.db
 !README.md
 !CHANGELOG.md
 !composer.json
+!robots.txt
+!sitemap.xml
 
 # track these mu-plugins, plugins, and themes
 # add your own entries here
