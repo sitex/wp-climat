@@ -725,3 +725,7 @@ $j(document).ready(function(){
     $j('.brands').fadeIn();
 */
 });
+
+$j(window).load(function() {
+    $j('#footer').css('overflow', 'hidden');
+});
