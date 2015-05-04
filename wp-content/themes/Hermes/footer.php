@@ -63,22 +63,11 @@
 					?>
 				</div>
 				
-				<div style="float:right;width:300px;text-align:right;margin-top:17px">
-					<?php
-						/**
-						 * Get footer text
-						 */
-					
-						$pp_footer_text = get_option('pp_footer_text');
-					
-						if(empty($pp_footer_text))
-						{
-							$pp_footer_text = 'Copyright © 2011 by Peerapong.';
-						}
-						
-						echo stripslashes(html_entity_decode($pp_footer_text));
-					?>
+				<div class="copy" style="float:right;width:300px;text-align:right;margin-top:17px">
+					<a href="/">euroclimat.kz</a>
 				</div>
+				<div style="clear:both;"></div>
+				<?php include TEMPLATEPATH . '/info.php' ?>
 			</div>
 			</div>
 			
