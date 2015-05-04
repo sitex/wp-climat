@@ -345,7 +345,7 @@ body { background-color:<?php echo $pp_bg; ?>; }
 ?>
 body .page_caption
 {
-	background: <?php echo $pp_header_bg; ?> url('<?php echo get_stylesheet_directory_uri(); ?>/images/header_bg.png') no-repeat top center;
+	background: <?php echo $pp_header_bg; ?> url('<?php echo get_stylesheet_directory_uri(); ?>/images/header_bg.png') repeat top center;
 }
 
 body #header_pattern
@@ -370,7 +370,7 @@ body.home #header_pattern
 ?>
 body .page_caption
 {
-	background: <?php echo $pp_header_bg; ?> url('<?php echo get_stylesheet_directory_uri(); ?>/images/header_bg.png') no-repeat top center;
+	background: <?php echo $pp_header_bg; ?> url('<?php echo get_stylesheet_directory_uri(); ?>/images/header_bg.png') repeat top center;
 }
 
 body #header_pattern
@@ -409,7 +409,7 @@ body.home #header_pattern
 	if(!empty($pp_tagline_font_size))
 	{
 ?>
-.tagline_inner { font-size:<?php echo $pp_tagline_font_size; ?>px; }
+.tagline_inner { font-size:24px;padding-top: 20px; }
 <?php
 	}
 	
