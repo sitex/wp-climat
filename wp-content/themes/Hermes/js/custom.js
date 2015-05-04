@@ -700,5 +700,28 @@ $j(document).ready(function(){
 			$j(this).find('a .overlay_detail *').css('visibility', 'hidden');
 		});		
 	});
-	
+/*
+    var brands = $j('.brands a');
+    var items = $j('.portfolio-content .project');
+    brands.click(function(event){
+        event.preventDefault();
+        // read brand
+        var brand = $j(this).text();
+        // toggle class
+        brands.not(this).removeClass('active');
+        $j(this).toggleClass('active');
+        // check class
+        if ($j(this).hasClass('active'))
+        {
+            // show brand
+            items.hide();
+            $j('[data-brand=' + brand + ']').show();
+        } else {
+            // show all
+            items.show();
+        }
+    });
+    // show brands after load
+    $j('.brands').fadeIn();
+*/
 });
