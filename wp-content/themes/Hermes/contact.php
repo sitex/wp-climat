@@ -118,7 +118,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 1:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="your_name" name="your_name" type="text" style="width:97%" title="Name*"/>
+						    					<input id="your_name" name="your_name" type="text" style="width:97%" placeholder="Имя*"/>
 						    				</p>				
 							<?php
 											break;
@@ -126,7 +126,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 2:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="email" name="email" type="text" style="width:97%" title="Email*"/>
+						    					<input id="email" name="email" type="text" style="width:97%" placeholder="Email*"/>
 						    				</p>				
 							<?php
 											break;
@@ -134,7 +134,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 3:
 							?>
 											 <p style="margin-top:20px">
-						    					<textarea id="message" name="message" rows="7" cols="10" style="width:97%" title="Message*"></textarea>
+						    					<textarea id="message" name="message" rows="7" cols="10" style="width:97%" placeholder="Сообщение*"></textarea>
 						    				</p>				
 							<?php
 											break;
@@ -142,7 +142,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 4:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="address" name="address" type="text" style="width:97%" title="Address"/>
+						    					<input id="address" name="address" type="text" style="width:97%" placeholder="Address"/>
 						    				</p>				
 							<?php
 											break;
@@ -150,7 +150,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 5:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="phone" name="phone" type="text" style="width:97%" title="Phone"/>
+						    					<input id="phone" name="phone" type="text" style="width:97%" placeholder="Phone"/>
 						    				</p>				
 							<?php
 											break;
@@ -158,7 +158,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 6:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="mobile" name="mobile" type="text" style="width:97%" title="Mobile"/>
+						    					<input id="mobile" name="mobile" type="text" style="width:97%" placeholder="Номер телефона*"/>
 						    				</p>				
 							<?php
 											break;
@@ -166,7 +166,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 7:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="company" name="company" type="text" style="width:97%" title="Company Name"/>
+						    					<input id="company" name="company" type="text" style="width:97%" placeholder="Company Name"/>
 						    				</p>				
 							<?php
 											break;
@@ -174,7 +174,7 @@ if(!isset($hide_header) OR !$hide_header)
 											case 8:
 							?>
 											 <p style="margin-top:20px">
-						    					<input id="country" name="country" type="text" style="width:97%" title="Country"/>
+						    					<input id="country" name="country" type="text" style="width:97%" placeholder="Country"/>
 						    				</p>				
 							<?php
 											break;
@@ -183,7 +183,7 @@ if(!isset($hide_header) OR !$hide_header)
 								}
 							?>
 						    <p style="margin-top:20px">
-								<input type="submit" value="Send Message"/>
+								<input type="submit" value="Отправить сообщение"/>
 							</p>
 						</form>
 						<div id="reponse_msg"></div>
