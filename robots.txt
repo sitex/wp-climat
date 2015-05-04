@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /about/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Host: http://euroclimat.kz/
+Sitemap: http://euroclimat.kz/sitemap.xml
