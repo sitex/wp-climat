@@ -879,6 +879,9 @@ add_filter('widget_text', 'pp_formatter', 99);
 //Make widget support shortcode
 add_filter('widget_text', 'do_shortcode');
 
+remove_action( 'wp_head', 'feed_links_extra', 3 ); // Display the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links', 2 ); // Display the links to the general feeds: Post and Comment Feed
+
 if (isset($_GET['activated']) && $_GET['activated']){
 	global $wpdb;
 	
