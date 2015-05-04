@@ -805,6 +805,69 @@ function pp_formatter($content) {
 	return $new_content;
 }
 
+
+/**
+ * @param $title
+ *
+ * @return array
+ */
+function getParams($title)
+{
+	$return = [
+		'title' => '',
+		'price' => '',
+		'category' => '',
+		'brand' => '',
+		'model' => '',
+	];
+
+	$brands_default = [
+		'LG',
+		'Almacom',
+		'Midea',
+		'Beko',
+		'Samsung',
+		'GREE',
+	];
+
+	$title_array = explode('от', $title);
+	if (!isset($title_array[1]))
+	{
+		$title_array[1] = '';
+	}
+	// price
+	$return['price'] = trim($title_array[1]);
+	// brand
+	foreach($brands_default as $brand)
+	{
+		// find brand in $title from $brands_default
+		if (stripos($title_array[0], $brand) !== FALSE)
+		{
+			$return['brand'] = $brand;
+			// category, model
+			$category_model = preg_split("/$brand/i", $title_array[0]);
+			$return['category'] = trim($category_model[0]);
+			if (isset($category_model[1]))
+			{
+				$return['model'] = trim($category_model[1]);
+			}
+
+		}
+	}
+
+	// combine title;
+	$return['title'] = $return['category'];
+	$return['title'] .= ' '.$return['brand'];
+	$return['title'] .= ' '.$return['model'];
+	// if empty title - use $title
+	if (trim($return['title']) == '')
+	{
+		$return['title'] = $title_array[0];
+	}
+
+	return $return;
+}
+
 // Remove the 2 main auto-formatters
 remove_filter('the_content', 'wpautop');
 remove_filter('the_content', 'wptexturize');
