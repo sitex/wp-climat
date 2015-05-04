@@ -24,10 +24,12 @@
 # ignore everything in the root except the "wp-content" directory.
 /*
 !wp-content/
+!wp-includes/
 
 # ignore everything in the "wp-content" directory, except:
 # mu-plugins, plugins, and themes directories
 wp-content/*
+wp-includes/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
@@ -95,5 +97,6 @@ Thumbs.db
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/example-plugin/
 !wp-content/themes/Hermes/
+!wp-includes/general-template.php
 
 wp-content/themes/Hermes/cache/*
