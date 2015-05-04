@@ -245,7 +245,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 							<div class="post_excerpt">
 								<?php echo _substr(strip_tags(strip_shortcodes(get_the_content())), 400); ?>
 								<br/><br/>
-								<a class="continue" href="<?php the_permalink(); ?>">Continue Reading »</a>
+								<a class="continue" href="<?php the_permalink(); ?>">Читать Далее »</a>
 							</div>
 							
 							<br class="clear"/><br/>
