@@ -147,13 +147,13 @@ if(!isset($hide_header) OR !$hide_header)
 							    $offset = (($current_page-1) * $portfolio_items);
 							}
 							
-							$args = array(
+							$args = [
 								'numberposts' => $portfolio_items,
 								'order' => $portfolio_sort,
 								'orderby' => 'date',
-								'post_type' => array('portfolios'),
+								'post_type' => ['portfolios'],
 								'offset' => $offset,
-							);
+							];
 							if(!empty($term))
 							{
 								$args['portfoliosets'].= $term;
@@ -164,12 +164,12 @@ if(!isset($hide_header) OR !$hide_header)
 							
 							//Get all portfolio items for paging
 							
-							$args = array(
+							$args = [
 								'numberposts' => -1,
 								'order' => $portfolio_sort,
 								'orderby' => 'date',
-								'post_type' => array('portfolios'),
-							);
+								'post_type' => ['portfolios'],
+							];
 							if(!empty($term))
 							{
 								$args['portfoliosets'].= $term;
@@ -180,15 +180,54 @@ if(!isset($hide_header) OR !$hide_header)
 		
 							if(isset($page_photo_arr) && !empty($page_photo_arr))
 							{
-								
-						?>
-								<div class="portfolio-content section content clearfix" style="920px"> 
-											<?php
+								$categories = array();
+								$brands = array();
+								/*foreach($page_photo_arr as $key => $portfolio_item)
+								{
+									$params = getParams($portfolio_item->post_title);
+									if ($params['category'] != '')
+									{
+										$categories[] = $params['category'];
+									}
+									if ($params['brand'] != '')
+									{
+										$brands[] = $params['brand'];
+									}
+								}
+								$brands = array_unique($brands); */
+
+								// sitex - always show brands
+								$brands = array('GREE','LG','Almacom','Midea','Beko');
+								?>
+
+								<?php if (count($brands) > 0): ?>
+								<ul class="brands">
+									<?php
+									foreach ($brands as $brand) {
+										echo '<li>';
+										//echo '<a class="brand-'.$brand.'" href="#'.$brand.'">'.$brand.'</a>';
+										echo '<a class="brand-'.$brand.'" href="/portfoliosets/'.strtolower($brand).'/">'.$brand.'</a>';
+										echo '</li>';
+									}
+									?>
+								</ul>
+								<br class="clear"/>
+								<?php endif; ?>
+
+								<div class="portfolio-content section content clearfix" style="920px">
+								<?php
 
 												foreach($page_photo_arr as $key => $portfolio_item)
 												{
 													$image_url = '';
-								
+													// sitex
+													$params = getParams($portfolio_item->post_title);
+													$portfolio_item->title = $params['title'];
+													$portfolio_item->price = $params['price'];
+													$portfolio_item->category = $params['category'];
+													$portfolio_item->brand = $params['brand'];
+													$portfolio_item->model = $params['model'];
+
 													if(has_post_thumbnail($portfolio_item->ID, 'large'))
 													{
 														$image_id = get_post_thumbnail_id($portfolio_item->ID);
@@ -200,7 +239,7 @@ if(!isset($hide_header) OR !$hide_header)
 													if(($key+1) % 4 == 0)
 													{	
 														$last_class = ' last';
-														$line_break = '<br class="clear"/>';
+														//$line_break = '<br class="clear"/>';
 													}
 													
 													$portfolio_link_url = get_post_meta($portfolio_item->ID, 'portfolio_link_url', true);
@@ -229,7 +268,7 @@ if(!isset($hide_header) OR !$hide_header)
 													
 													$pp_portfolio_image_height = 118;
 											?>
-															<div data-id="post-<?php echo $key+1; ?>" class="<?php echo $portfolio_item_set; ?> project" data-type="<?php echo $portfolio_item_set; ?>" style="width:240px;float:left;margin-bottom:50px;">
+															<div data-brand="<?php echo $portfolio_item->brand; ?>" data-id="post-<?php echo $key+1; ?>" class="<?php echo $portfolio_item_set; ?> project" data-type="<?php echo $portfolio_item_set; ?>">
 															<?php
 																$portfolio_type = get_post_meta($portfolio_item->ID, 'portfolio_type', true);
 																$portfolio_video_id = get_post_meta($portfolio_item->ID, 'portfolio_video_id', true);
@@ -257,11 +296,12 @@ if(!isset($hide_header) OR !$hide_header)
 															?>
 															<div class="portfolio4_shadow">
 																<a title="<?php echo $portfolio_item->post_title; ?>" href="<?php echo $image_url[0]; ?>" class="img_frame">
-																<span class="overlay_detail">
-																	<div>
-																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_zoom.png" alt=""/><br/>
-																	</div>
-																</span>
+																<!--sitex-->
+																<!--<span class="overlay_detail">-->
+																<!--	<div>-->
+																<!--		<img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/icon_zoom.png" alt=""/><br/>-->
+																<!--	</div>-->
+																<!--</span>-->
 																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
 																</a>
 															</div>
@@ -333,7 +373,12 @@ if(!isset($hide_header) OR !$hide_header)
 															?>
 																
 																<div class="portfolio_desc" style="width:197px;margin-top:20px;margin-left:10px">
-																	<strong><?php echo $portfolio_item->post_title?></strong>
+																	<a href="?p=<?php echo $portfolio_item->ID; ?>">
+																		<span><?php echo $portfolio_item->title; // title without price ?></span>
+																	</a>
+																	<?php if ($portfolio_item->price != ''): ?>
+																		<p class="price">от <span><?php echo $portfolio_item->price?></span> тенге</p>
+																	<?php endif; ?>
 																	<?php
 																		$pp_portfolio_display_desc = get_option('pp_portfolio_display_desc');
 																		
