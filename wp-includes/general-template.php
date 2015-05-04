@@ -787,8 +787,10 @@ function wp_title($sep = '&raquo;', $display = true, $seplocation = '') {
 	if ( is_tax() ) {
 		$term = get_queried_object();
 		if ( $term ) {
-			$tax = get_taxonomy( $term->taxonomy );
-			$title = single_term_title( $tax->labels->name . $t_sep, false );
+			//$tax = get_taxonomy( $term->taxonomy );
+			//$title = single_term_title( $tax->labels->name . $t_sep, false );
+			// sitex remove extra Title
+			$title = single_term_title( '', false );
 		}
 	}
 
