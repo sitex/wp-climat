@@ -547,6 +547,11 @@ body.home .curve
 {
 	float: left;
 	margin: 20px 0 0 0;
+    width: 380px;
+}
+.logo #custom_logo
+{
+    float: left;
 }
 
 .search_box
@@ -617,7 +622,7 @@ body.home .curve
 #menu_wrapper .nav ul li a, #menu_wrapper div .nav li a
 {
 	display: block;
-	padding: 8px 20px 8px 20px;
+	padding: 8px 15px 8px 15px;
 	margin: 0;
 	color: #555;
 }
@@ -629,7 +634,9 @@ body.home .curve
 
 #menu_wrapper div .nav li.current-menu-item > a
 {
-	color: #000;
+    background: #283138;
+	color: #fff;
+    cursor: default;
 }
 
 #menu_wrapper .nav ul li ul, #menu_wrapper div .nav li ul
@@ -4068,6 +4075,12 @@ strong.line
 .bokeh, body #header_pattern.bokeh, body.home #header_pattern.bokeh, #footer_pattern.bokeh
 {
 	background-image: url('../images/skins/bokeh_pattern.png');
+}
+
+#menu_wrapper div #main_menu.nav
+{
+    font-size: 15px;
+}
 
 /* BOTTOM INFO*/
 
