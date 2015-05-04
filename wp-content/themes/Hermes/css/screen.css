@@ -4085,4 +4085,49 @@ strong.line
     font-size: 18px;
     line-height: 120%;
 }
+
+/* CATALOG */
+ul.brands
+{
+    position: absolute;
+    top: 270px;
+    list-style: none;
+    /*display: none;*/
+}
+ul.brands li
+{
+    float: left;
+}
+ul.brands li a
+{
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+ul.brands li a.active
+{
+    background: black;
+    color: white;
+}
+.portfolio-content .project
+{
+    width: 240px;
+    height: 260px;
+    float: left;
+    margin-bottom: 50px;
+}
+p.price
+{
+    text-align: right;
+}
+p.price span
+{
+    font-size: 21px;
+}
+.page_caption p.price
+{
+    float: none;
+}
+.page_caption p.price
+{
+    text-align: center;
 }
