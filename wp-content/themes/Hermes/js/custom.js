@@ -338,22 +338,22 @@ $j(document).ready(function(){
 	
 	$j('.one_fourth_img').tipsy({fade: false, gravity: 'n'});*/
 	
-	Cufon.replace('h1.cufon');
-	Cufon.replace('h2.cufon');
-	Cufon.replace('h3.cufon');
-	Cufon.replace('h4.cufon');
-	Cufon.replace('h5.cufon');
-	Cufon.replace('h6.cufon');
-	Cufon.replace('.tagline_header');
-	Cufon.replace('.pricing_box h2');
-	Cufon.replace('.dropcap1');
-	Cufon.replace('.circle_date a');
-	Cufon.replace('.caption_header h1');
-	Cufon.replace('.caption_desc');
-	Cufon.replace('.post_header h3 a');
-	Cufon.replace('.post_img_date');
-	Cufon.replace('.widgettitle');
-	Cufon.replace('.tagline_inner');
+	//Cufon.replace('h1.cufon');
+	//Cufon.replace('h2.cufon');
+	//Cufon.replace('h3.cufon');
+	//Cufon.replace('h4.cufon');
+	//Cufon.replace('h5.cufon');
+	//Cufon.replace('h6.cufon');
+	//Cufon.replace('.tagline_header');
+	//Cufon.replace('.pricing_box h2');
+	//Cufon.replace('.dropcap1');
+	//Cufon.replace('.circle_date a');
+	//Cufon.replace('.caption_header h1');
+	//Cufon.replace('.caption_desc');
+	//Cufon.replace('.post_header h3 a');
+	//Cufon.replace('.post_img_date');
+	//Cufon.replace('.widgettitle');
+	//Cufon.replace('.tagline_inner');
 	
 	var footerLi = 0;
 	$j('#footer .sidebar_widget li.widget').each(function()

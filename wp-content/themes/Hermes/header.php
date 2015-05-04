@@ -17,7 +17,7 @@ if(!empty($pp_advance_enable_switcher))
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-
+<link href='http://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <?php
 $pp_seo_enable = get_option('pp_seo_enable');
 
@@ -174,7 +174,6 @@ if(!empty($pp_seo_meta_key))
 <?php
 	wp_enqueue_script("jquery", get_stylesheet_directory_uri()."/js/jquery.js", false, $pp_theme_version);
 	wp_enqueue_script("jquery_UI_js", get_stylesheet_directory_uri()."/js/jquery-ui.js", false, $pp_theme_version);
-	wp_enqueue_script("jquery_cufon", get_stylesheet_directory_uri()."/js/cufon.js", false, $pp_theme_version);
 	wp_enqueue_script("colorpicker.js", get_stylesheet_directory_uri()."/js/colorpicker.js", false, $pp_theme_version);
 	wp_enqueue_script("eye.js", get_stylesheet_directory_uri()."/js/eye.js", false, $pp_theme_version);
 	wp_enqueue_script("utils.js", get_stylesheet_directory_uri()."/js/utils.js", false, $pp_theme_version);
@@ -199,7 +198,6 @@ if(!empty($pp_seo_meta_key))
 		$pp_font = 'Vegur_300.font';
 	}
 		
-	wp_enqueue_script("cufon_font", get_stylesheet_directory_uri()."/fonts/".$pp_font.".js", false, $pp_theme_version);
 	
 	$js_path = TEMPLATEPATH."/js/";
 	$js_arr = array(
