@@ -767,6 +767,14 @@ if(isset($page->ID))
 							<a id="custom_logo" href="<?php echo home_url(); ?>"><img src="<?php echo $pp_logo?>" alt=""/></a>
 							
 							<!-- End logo -->
+
+							<div class="phone">
+								<h2>Позвоните нам:</h2>
+								<ul>
+									<li><a href="tel:+77273383316">+7 (727) 338-33-16</a></li>
+									<li><a href="tel:+77770091967">+7 (777) 009-19-67</a></li>
+								</ul>
+							</div>
 						</div>
 					
 					    <?php 	
