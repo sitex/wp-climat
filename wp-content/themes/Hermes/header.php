@@ -43,7 +43,7 @@ else
 if(empty($pp_seo_home_title))
 {
 ?>
-<title><?php wp_title('&lsaquo;', true, 'right'); ?><?php bloginfo('name'); ?></title>
+<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 <?php
 } else {
 ?>
