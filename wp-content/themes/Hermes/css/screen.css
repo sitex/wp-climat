@@ -4042,4 +4042,32 @@ strong.line
 .bokeh, body #header_pattern.bokeh, body.home #header_pattern.bokeh, #footer_pattern.bokeh
 {
 	background-image: url('../images/skins/bokeh_pattern.png');
+
+/* BOTTOM INFO*/
+
+.info {
+    padding: 50px 0;
+}
+.info h1 {
+    text-align: center;
+}
+.info h1 {
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.info h2 {
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 13px;
+    padding: 20px 0 15px;
+}
+.info .col1, .info .col2 {
+    width: 450px;
+}
+.info .col1 {
+    float: left;
+}
+.info .col2 {
+    float: right;
+}
 }
