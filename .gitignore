@@ -91,6 +91,7 @@ Thumbs.db
 !composer.json
 !robots.txt
 !sitemap.xml
+!.htaccess
 
 # track these mu-plugins, plugins, and themes
 # add your own entries here
