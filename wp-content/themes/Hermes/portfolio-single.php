@@ -45,7 +45,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 				</div>
 			</div>
 			<div class="caption_desc">
-				<p class="price">от <span><?php echo $params['price']; ?></span> тенге</p>
+				<!--<p class="price">от <span>--><?php //echo $params['price']; ?><!--</span> тенге</p>-->
 			</div>
 			<br class="clear"/>
 		</div>
