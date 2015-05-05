@@ -813,22 +813,22 @@ function pp_formatter($content) {
  */
 function getParams($title)
 {
-	$return = [
+	$return = array(
 		'title' => '',
 		'price' => '',
 		'category' => '',
 		'brand' => '',
 		'model' => '',
-	];
+	);
 
-	$brands_default = [
+	$brands_default = array(
 		'LG',
 		'Almacom',
 		'Midea',
 		'Beko',
 		'Samsung',
 		'GREE',
-	];
+	);
 
 	$title_array = explode('от', $title);
 	if (!isset($title_array[1]))
