@@ -4125,13 +4125,28 @@ strong.line
     line-height: 120%;
 }
 
+/* BREADCRUMBS */
+ul#breadcrumbs
+{
+    margin: 0;
+    list-style: none;
+}
+ul#breadcrumbs li
+{
+    float: left;
+    padding-right: 10px;
+}
+ul#breadcrumbs li a
+{
+    text-decoration: underline;
+}
+
 /* CATALOG */
 ul.brands
 {
-    position: absolute;
-    top: 270px;
+    height: 50px;
+    margin-top: -30px;
     list-style: none;
-    /*display: none;*/
 }
 ul.brands li
 {

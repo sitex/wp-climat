@@ -83,7 +83,8 @@ if(!isset($hide_header) OR !$hide_header)
 				<div class="inner_wrapper">
 				
 				<div class="standard_wrapper">
-				<br class="clear"/><hr/><br/>
+					<?php the_breadcrumb(); ?>
+					<br class="clear"/><hr/><br/>
 <?php
 }
 ?>	

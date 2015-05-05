@@ -63,6 +63,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 				<!-- Begin main content -->
 				<div class="inner_wrapper">
 					<div class="standard_wrapper">
+					<?php the_breadcrumb(); ?>
 					<br class="clear"/><hr/><br/>
 
 					<div class="sidebar_content" style="border:0">

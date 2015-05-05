@@ -86,6 +86,7 @@ if(!isset($hide_header) OR !$hide_header)
 				<!-- Begin main content -->
 				<div class="inner_wrapper">
 				<div class="standard_wrapper">
+					<?php the_breadcrumb(); ?>
 					<br class="clear"/><hr/><br/>
 					
 <?php

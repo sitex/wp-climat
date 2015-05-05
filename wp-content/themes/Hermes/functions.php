@@ -868,6 +868,46 @@ function getParams($title)
 	return $return;
 }
 
+function the_breadcrumb() {
+	if (!is_home()) {
+		echo '<ul id="breadcrumbs">';
+
+		// homepage
+		echo '<li><a href="'.get_option('home').'">';
+		echo bloginfo('name');
+		echo "</a></li>";
+
+		// brands
+		if (is_tax()) {
+			echo '<li>'.single_term_title().'</li>';
+		}
+
+		// brand and products
+		if (is_category() || is_single()) {
+			the_taxonomies(
+				array(
+					'before'   => '<li>',
+					'after'    => '</li>',
+					'template' => '% %l',
+				)
+			);
+			if (is_single()) {
+				echo "</li><li>";
+				the_title();
+				echo '</li>';
+			}
+
+		// pages
+		} elseif (is_page()) {
+			echo '<li>';
+			echo the_title();
+			echo '</li>';
+		}
+		echo '</ul>';
+	}
+
+}
+
 // Remove the 2 main auto-formatters
 remove_filter('the_content', 'wpautop');
 remove_filter('the_content', 'wptexturize');
