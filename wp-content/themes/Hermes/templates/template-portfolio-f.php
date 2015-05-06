@@ -148,13 +148,13 @@ if(!isset($hide_header) OR !$hide_header)
 							    $offset = (($current_page-1) * $portfolio_items);
 							}
 							
-							$args = [
+							$args = array(
 								'numberposts' => $portfolio_items,
 								'order' => $portfolio_sort,
 								'orderby' => 'date',
-								'post_type' => ['portfolios'],
+								'post_type' => array('portfolios'),
 								'offset' => $offset,
-							];
+							);
 							if(!empty($term))
 							{
 								$args['portfoliosets'].= $term;
@@ -165,12 +165,12 @@ if(!isset($hide_header) OR !$hide_header)
 							
 							//Get all portfolio items for paging
 							
-							$args = [
+							$args = array(
 								'numberposts' => -1,
 								'order' => $portfolio_sort,
 								'orderby' => 'date',
-								'post_type' => ['portfolios'],
-							];
+								'post_type' => array('portfolios'),
+							);
 							if(!empty($term))
 							{
 								$args['portfoliosets'].= $term;
