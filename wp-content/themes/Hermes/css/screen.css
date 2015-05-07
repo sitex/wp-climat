@@ -1267,9 +1267,9 @@ body.home #content_wrapper
 {
 	margin: auto;
 	width:960px;
-	text-align: center;
+	text-align: left;
 	margin-top: 60px;
-	font-size: 18px;
+	font-size: 13px;
 	color: #333;
 }
 
@@ -4085,7 +4085,7 @@ strong.line
 /* BOTTOM INFO*/
 
 .info {
-    padding: 50px 0;
+    padding: 0 0 50px;
 }
 .info h1 {
     text-align: center;
@@ -4098,7 +4098,7 @@ strong.line
     font-weight: bold;
     line-height: 15px;
     font-size: 13px;
-    padding: 20px 0 15px;
+    /*padding: 20px 0 15px;*/
 }
 .info .col1, .info .col2 {
     width: 450px;

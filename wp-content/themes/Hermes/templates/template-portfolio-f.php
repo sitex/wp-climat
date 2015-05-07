@@ -121,6 +121,11 @@ if(!isset($hide_header) OR !$hide_header)
 								
 
 						
+<?php
+if ($custom_title == 'GREE') {
+	include 'content_gree.php';
+}
+?>
 						<br class="clear"/>
 						
 						<!-- Begin portfolio content -->
