@@ -1,6 +1,6 @@
 <?php
 $show_info = false;
-if (in_array($_SERVER["REQUEST_URI"], ['', '/'])) {
+if (in_array($_SERVER["REQUEST_URI"], array('', '/'))) {
 	$show_info = TEMPLATEPATH . '/info_main.php';
 };
 if (strpos($_SERVER["REQUEST_URI"], 'uslugi') !== false) {
