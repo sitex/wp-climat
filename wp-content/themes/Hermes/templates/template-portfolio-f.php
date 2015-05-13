@@ -278,108 +278,14 @@ if ($custom_title == 'GREE') {
 															<?php
 																$portfolio_type = get_post_meta($portfolio_item->ID, 'portfolio_type', true);
 																$portfolio_video_id = get_post_meta($portfolio_item->ID, 'portfolio_video_id', true);
-																switch($portfolio_type)
-																{
-																case 'External Link':
-																default:
 															?>
 															<div class="portfolio4_shadow">
-																<a title="<?php echo $portfolio_item->post_title; ?>" href="<?php echo $permalink_url; ?>">
-																<span class="overlay_detail">
-																	<div>
-																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_zoom.png" alt=""/><br/>
-																	</div>
-																</span>
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
-																</a>
+																<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
 															</div>
 															
-															<?php
-																break;
-																//end external link
-																
-																case 'Image':
-															?>
-															<div class="portfolio4_shadow">
-																<a title="<?php echo $portfolio_item->post_title; ?>" href="<?php echo $image_url[0]; ?>" class="img_frame">
-																<!--sitex-->
-																<!--<span class="overlay_detail">-->
-																<!--	<div>-->
-																<!--		<img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/icon_zoom.png" alt=""/><br/>-->
-																<!--	</div>-->
-																<!--</span>-->
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
-																</a>
-															</div>
-															
-															<?php
-																break;
-																//end image
-																
-																case 'Youtube Video':
-															?>
-															<div class="portfolio4_shadow">
-																<a title="<?php echo $portfolio_item->post_title; ?>" href="#video_<?php echo $portfolio_video_id; ?>" class="lightbox_youtube">
-																<span class="overlay_detail">
-																	<div>
-																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_play.png" alt=""/><br/>
-																	</div>
-																</span>
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
-																</a>
-															</div>
-																
-							<div style="display:none;">
-							    <div id="video_<?php echo $portfolio_video_id; ?>" style="width:640px;height:385px">
-							        
-							        <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/<?php echo $portfolio_video_id; ?>" style="width:640px;height:385px" wmode="transparent">
-			        		    		<param name="movie" value="http://www.youtube.com/v/<?php echo $portfolio_video_id; ?>" />
-			    			    	</object>
-							        
-							    </div>	
-							</div>
-															
-															<?php
-																break;
-																//end image
-															
-															case 'Vimeo Video':
-															?>
-															<div class="portfolio4_shadow">
-																<a title="<?php echo $portfolio_item->post_title; ?>" href="#video_<?php echo $portfolio_video_id; ?>" class="lightbox_vimeo">
-																<span class="overlay_detail">
-																	<div>
-																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_play.png" alt=""/><br/>
-																	</div>
-																</span>
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
-																</a>
-															</div>
-																
-							<div style="display:none;">
-							    <div id="video_<?php echo $portfolio_video_id; ?>" style="width:601px;height:338px">
-							    
-							        <object width="601" height="338" data="http://vimeo.com/moogaloop.swf?clip_id=<?php echo $portfolio_video_id; ?>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1" type="application/x-shockwave-flash">
-							        	<param name="wmode" value="transparent">
-			  				    		<param name="allowfullscreen" value="true" />
-			  				    		<param name="allowscriptaccess" value="always" />
-			  				    		<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=<?php echo $portfolio_video_id; ?>&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1" />
-							    	</object>
-							        
-							    </div>	
-							</div>
-															
-															<?php
-																break;
-																//end image
-															?>
-															
-															<?php
-																}
-															?>
 																
 																<div class="portfolio_desc" style="width:197px;margin-top:20px;margin-left:10px">
-																	<a href="?p=<?php echo $portfolio_item->ID; ?>">
+																	<a href="<?php echo $permalink_url; ?>">
 																		<span><?php echo $portfolio_item->title; // title without price ?></span>
 																	</a>
 																	<?php if ($portfolio_item->price != ''): ?>
