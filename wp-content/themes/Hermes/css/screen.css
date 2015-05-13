@@ -3469,6 +3469,20 @@ strong.header
 	width: 920px;
 }
 
+.standard_wrapper li,
+.standard_wrapper p {
+    font-size: 15px;
+}
+.standard_wrapper p strong {
+    color: black;
+}
+.standard_wrapper a.tagline_button {
+    color: white;
+}
+.standard_wrapper a {
+    color: #1155cc;
+}
+
 .top_shadow, #content_wrapper.top_shadow
 {
 	background: transparent url("../images/top_shadow.png") repeat-x top;
@@ -4134,11 +4148,17 @@ ul#breadcrumbs
 ul#breadcrumbs li
 {
     float: left;
-    padding-right: 10px;
 }
 ul#breadcrumbs li a
 {
     text-decoration: underline;
+}
+ul#breadcrumbs li a:after
+{
+    content: "\002F";
+    display: inline-block;
+    margin: 0 9px;
+    font-size: 13px;
 }
 
 /* CATALOG */
