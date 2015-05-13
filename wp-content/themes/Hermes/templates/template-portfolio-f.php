@@ -280,7 +280,7 @@ if ($custom_title == 'GREE') {
 																$portfolio_video_id = get_post_meta($portfolio_item->ID, 'portfolio_video_id', true);
 															?>
 															<div class="portfolio4_shadow">
-																<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
+																<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_url[0]?>&amp;h=<?php echo $pp_portfolio_image_height; ?>&amp;w=197&amp;zc=1" alt="<?php echo $portfolio_item->title ?>" class="img_nofade frame" width="197" height="<?php echo $pp_portfolio_image_height; ?>"/>
 															</div>
 															
 																
