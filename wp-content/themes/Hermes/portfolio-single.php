@@ -90,9 +90,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 							    {
 							?>
 							<br class="clear"/>
-							<div class="post_shadow">
+						    <p>
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/timthumb.php?src=<?php echo $image_thumb[0]; ?>&w=<?php echo $pp_blog_image_width; ?>&h=<?php echo $pp_blog_image_height; ?>&zc=1" alt="" class="post_img"/>
-							</div>
+						    </p>
 							<br/><br/>
 
 							<?php
