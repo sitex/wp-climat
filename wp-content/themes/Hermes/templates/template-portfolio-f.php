@@ -289,7 +289,7 @@ if ($custom_title == 'GREE') {
 																		<span><?php echo $portfolio_item->title; // title without price ?></span>
 																	</a>
 																	<?php if ($portfolio_item->price != ''): ?>
-																		<p class="price">от <span><?php echo $portfolio_item->price?></span> тенге</p>
+																		<p class="price">от <span><?php echo $portfolio_item->price?></span> тг.</p>
 																	<?php endif; ?>
 																	<?php
 																		$pp_portfolio_display_desc = get_option('pp_portfolio_display_desc');
