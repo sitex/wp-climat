@@ -879,7 +879,9 @@ function the_breadcrumb() {
 
 		// brands
 		if (is_tax()) {
-			echo '<li>'.single_term_title().'</li>';
+			echo '<li>';
+			single_term_title();
+			echo '</li>';
 		}
 
 		// brand and products
