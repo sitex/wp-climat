@@ -203,6 +203,12 @@ else
 			),
 	);
 }
+$portfolio_price = array(
+	"section" => "Content Type",
+	"id" => "portfolio_price",
+	"title" => __('Price')
+);
+array_unshift($postmetas['portfolios'], $portfolio_price);
 
 /*print '<pre>';
 print_r($post_obj);

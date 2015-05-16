@@ -229,7 +229,7 @@ if ($custom_title == 'GREE') {
 													// sitex
 													$params = getParams($portfolio_item->post_title);
 													$portfolio_item->title = $params['title'];
-													$portfolio_item->price = $params['price'];
+													$portfolio_item->price = get_post_meta($portfolio_item->ID, 'portfolio_price', true);
 													$portfolio_item->category = $params['category'];
 													$portfolio_item->brand = $params['brand'];
 													$portfolio_item->model = $params['model'];
