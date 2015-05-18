@@ -236,7 +236,12 @@ if ($custom_title == 'GREE') {
 													// sitex
 													$params = getParams($portfolio_item->post_title);
 													$portfolio_item->title = $params['title'];
-													$portfolio_item->price = get_post_meta($portfolio_item->ID, 'portfolio_price', true);
+													$portfolio_item->price = $params['price'];
+													if (get_post_meta($portfolio_item->ID, 'portfolio_price', true) != '') {
+														$price = get_post_meta($portfolio_item->ID, 'portfolio_price', true);
+														$price_format = number_format($price, 0, '.', ' ');
+														$portfolio_item->price = $price_format;
+													}
 													$portfolio_item->category = $params['category'];
 													$portfolio_item->brand = $params['brand'];
 													$portfolio_item->model = $params['model'];
