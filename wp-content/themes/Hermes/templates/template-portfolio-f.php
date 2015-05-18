@@ -203,7 +203,14 @@ if ($custom_title == 'GREE') {
 								$brands = array_unique($brands); */
 
 								// sitex - always show brands
-								$brands = array('GREE','LG','Almacom','Midea','Beko');
+								$brands = array(
+									'GREE',
+									'LG',
+									'Almacom',
+									'Midea',
+									'Beko',
+									'Ditreex',
+								);
 								?>
 
 								<?php if (count($brands) > 0): ?>

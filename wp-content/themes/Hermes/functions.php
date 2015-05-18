@@ -828,6 +828,7 @@ function getParams($title)
 		'Beko',
 		'Samsung',
 		'GREE',
+		'Ditreex',
 	);
 
 	$title_array = explode('от', $title);
