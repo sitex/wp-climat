@@ -97,6 +97,7 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/google-sitemap-generator/
+!wp-content/plugins/codepress-admin-columns/
 !wp-content/themes/Hermes/
 !wp-includes/general-template.php
 
