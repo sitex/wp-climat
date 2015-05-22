@@ -10,6 +10,9 @@ RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
 
+# about
+RewriteRule ^about/ / [QSD,L,R=301]
+
 # BEGIN Expire headers
 <ifModule mod_expires.c>
 ExpiresActive On
