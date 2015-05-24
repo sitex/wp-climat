@@ -85,6 +85,13 @@ if (have_posts()) : while (have_posts()) : the_post();
 						<!-- Begin each blog post -->
 						<div class="post_wrapper" <?php if($cur_post==$num_of_posts) { echo 'style="margin-bottom:0"'; }?>>
 
+						    <?php
+							// check 'hide' meta field
+							if (get_field('hide')) {
+								echo '<p>Нет в наличии</p>';
+							}
+							?>
+
 							<?php
 							    if(isset($image_thumb[0]))
 							    {
